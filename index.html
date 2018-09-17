@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Conversation Simulator</title>
+
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/buttons.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<section>
+	<header class="page-header">
+		<h1 class="page-header__title">Conversation Simulator</h1>
+	</header>
+
+	<div class="page-content">
+		<div class="box-control">
+			<h2 class="box-control__title">People Control</h2>
+			<div class="box-control__ctrl">
+				<button id="add-btn">New Person</button>
+			</div>
+			
+			<div class="box-control__ctrl">
+				<label>Speed</label>
+				<input type="range" value="50" min="10" max="100" id="speed-field" step="10">
+			</div>
+			<div class="box-control__ctrl">
+				<button id="control-btn">Pause</button>
+			</div>
+			<div class="box-control__ctrl">
+				<button id="report-btn">Show Report</button>
+			</div>
+			<div class="box-control__ctrl">
+				<button id="jump-btn">Jump 30 min</button>
+			</div>
+			<div class="box-control__ctrl">
+				<span id="time-fld">0</span>
+			</div>
+		</div>
+		<div class="canvas-box" id="canvas-box">
+
+		</div>
+		<div class="analytic-box" id="analytic-box">
+			<div id="abox-cls-btn" class="abox-cls-btn">
+				<span class="abox-cls-btn__x1"></span>
+				<span class="abox-cls-btn__x2"></span>
+			</div>
+			<h2 class="analytic-box__title">Person</h2>
+
+			<div class="analytic-content"></div>
+		</div>
+
+	</div>
+
+	<div class="intro-over">
+		<div class="intro-over__box">
+			<header class="intro-over__hdr">
+				<h2 class="intro-over__hdr-title">Conversation Similator</h2>
+			</header>
+			<div class="intro-over__content">
+				<div class="intro-over__ctrl">
+					<p>A quick and simple conversation simulator. Add people to the conversation and watch them get bored and walk away to meet new groups.</p>
+				</div>
+
+				<div class="intro-groups">
+					<div class="intro-group" id="add-group-box">
+					</div>
+					<a href="#" id="add-group-btn">Add Group</a>
+				</div>
+				
+
+				<div class="intro-over__ctrl">
+					<button class="btn primary" id="start-btn">Start</button>
+				</div>
+				<div class="intro-over__ctrl intro-over__ctrl-info">
+					<p>More on <a href="https://github.com/ibudiallo/kwiktalk">Github</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="report" id="rep-sect">
+		<div class="report-box">
+			<header class="report__hdr">
+				<h3 class="report__hdr-title">Report</h3>
+				<div class="report-cls-btn" id="report-cls-btn">
+					<span class="report-cls__x1"></span>
+					<span class="report-cls__x2"></span>
+				</div>
+			</header>
+			<div class="report-body">
+				<div class="report-body__hdr" id="report-body-hdr">
+				</div>
+				<div class="rep-body__canvas" id="rep-canvas">
+
+				</div>
+				<div class="report-body__ftr" id="report-body-ftr">
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<footer class="page-footer">
+		<p class="page-footer__copy"><a href="https://github.com/ibudiallo/kwiktalk">Github</a></p>
+		<p class="page-footer__copy"><a href="https://idiallo.com/aboutme.html">Ibrahim Diallo</a> &copy; 2018</p>
+	</footer>
+	<script type="text/javascript" src="js/simply.js"></script>
+	<script type="text/javascript" src="js/people.js"></script>
+	<script type="text/javascript" src="js/report.js"></script>
+	<script type="text/javascript" src="js/brush.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</section>
+</body>
+</html>

@@ -1,0 +1,392 @@
+/**
+	# Colors
+	blue: #3498db;
+	red: #e74c3c;
+	yellow: #f1c40f;
+	green: #2ecc71;
+
+*/
+
+/** animation **/
+@keyframes bgPulse {
+	from {
+		background-color:rgba(0,0,0,.1);
+	}
+	to {
+		background-color:rgba(0,0,0,.9);
+	}
+}
+
+/** Style **/
+
+.page-header {
+	background-color:#e74c3c;
+}
+.page-header__title {
+	padding:12px 6px;
+	font-size: 24px;
+	line-height: 1.2em;
+	text-align: center;
+	color:#fff;
+}
+.page-content {
+	margin:32px auto;
+	position: relative;
+}
+
+.canvas-box {
+	min-height:580px;
+	border-top:1px solid #cdcdcd;
+	margin:0 auto;
+}
+.box-control {
+	position:absolute;
+	width:100%;
+	z-index: 1;
+	top:-32px;
+	height:32px;
+	padding: 0px 6px;
+}
+.box-control__title {
+	font-weight: bold;
+	line-height: 1.32em;
+	padding-bottom: 12px;
+	display: inline-block;
+}
+.box-control__ctrl {
+	position: relative;
+	margin-bottom: 12px;
+	display: inline-block;
+	margin-right: 6px;
+}
+.box-control__ctrl label {
+	display: inline-block;
+	font-weight: bold;
+}
+.box-control__ctrl input {
+	position: relative;
+	top:6px;
+	box-sizing:border-box;
+}
+
+.canvas-box {
+	position: relative;
+}
+.person {
+	position: absolute;
+	width:96px;
+	height: 96px;
+	border:2px solid rgba(0,0,0,0);
+	transition: top .3s, left .3s, transform .3s;
+}
+
+.person .guy {
+	position: absolute;
+	width:28px;
+	height:56px;
+	background-color:#3498db;
+	top:18px;
+	left:30px;
+	border-radius: 18px;
+	cursor: pointer;
+}
+.person .guy::before {
+	position: absolute;
+	content: " ";
+	display: block;
+	top:12px;
+	height:32px;
+	width:32px;
+	border-radius: 50%;
+	background-color:#3498db;
+	z-index: 0;
+	box-shadow: 0 1px 3px rgba(0,0,0,.16);
+}
+.person .guy.talking {
+	background-color:#2ecc71;
+}
+.person .guy.talking::before {
+	background-color:#2ecc71;
+}
+.talk-box {
+	display: none;
+	position: absolute;
+	width:24px;
+	height:42px;
+	border-radius: 12px;
+	box-shadow: 0 1px 3px rgba(0,0,0,.16);
+	background-color: #fff;
+	top:8px;
+	left:36px;
+	padding-top: 6px;
+}
+.talk-box span {
+	display:block;
+	width:8px;
+	height:8px;
+	margin-bottom: 2px;
+	border-radius: 50%;
+	background-color:#111;
+	margin:2px auto;
+	animation: bgPulse 1s ease-out alternate infinite;
+}
+.person .guy.talking .talk-box {
+	display: block;
+}
+
+
+
+
+
+
+/*** Analytic Box **/
+.analytic-box {
+	display: none;
+	position: absolute;
+	top:0;
+	left:0;
+	width:200px;
+	padding:6px;
+	border:1px solid #cdcdcd;
+	border-radius: 2px;
+	box-shadow: 0 1px 2px rgba(0,0,0,.16);
+	background-color: #fff;
+}
+.analytic-box__title {
+	font-weight: bold;
+	line-height: 1.32em;
+	padding-bottom: 12px;
+}
+.abox-cls-btn {
+	position: absolute;
+	top:6px;
+	right:6px;
+	width:24px;
+	height:24px;
+	background-color: #333;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.abox-cls-btn:hover {
+	background-color: #555;
+}
+.abox-cls-btn span {
+	position: absolute;
+	top:11px;
+	left:4px;
+	display: block;
+	height:2px;
+	width:16px;
+	background-color: #fff;
+}
+.abox-cls-btn__x1{
+	transform:rotateZ(45deg);
+}
+.abox-cls-btn__x2{
+	transform:rotateZ(-45deg);
+}
+
+.p-an-item {
+	position: relative;
+	border:2px solid #fff;
+	padding:6px 3px ;
+}
+.p-an-item.p-an-item--talking {
+	border-color:#f1c40f; 
+}
+.p-an-item--talking::after {
+	content:"Talking";
+	position: absolute;
+	top:6px;
+	right:2px;
+	color:#2ecc71;
+}
+.p-an-item--gone {
+	opacity: .3;
+}
+.p-an-item__title {
+	font-weight: bold;
+	font-size:12px;
+	color:#333;
+}
+.p-an-item__point {
+	font-size: 12px;
+	color:#555;
+}
+
+
+
+
+/** Overlay **/
+.intro-over {
+	position: fixed;
+	width:100%;
+	height:100%;
+	z-index: 1;
+	background-color: rgba(255,255,255,.9);
+	top:0;
+	left:0;
+}
+.intro-over__box {
+	max-width: 480px;
+	margin:16px auto;
+	background-color: #fff;
+	overflow: hidden;
+	border-radius: 2px;
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	margin-top:32px;
+}
+.intro-over__hdr {
+	background-color:#e74c3c;
+	padding:12px;
+}
+.intro-over__hdr-title {
+	color:#fff;
+	text-shadow:0 1px 2px rgba(0,0,0,.16);
+	text-align: center;
+	font-size: 16px;
+}
+.intro-over__content {
+	padding:12px;
+}
+
+.intro-groups {
+	margin-bottom: 12px;
+}
+
+
+.intro-over__ctrl {
+	margin-bottom: 12px;
+	margin-right: 12px;
+}
+.intro-over__ctrl-info {
+	text-align: center;
+}
+.intro-over__ctrl button {
+	border:none;
+}
+.intro-over__ctrl label {
+	display: block;
+	color:#333;
+	font-weight: bold;
+	margin-bottom: 6px;
+}
+
+.group-add span {
+	line-height: 2em;
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left:6px;
+}
+
+
+/*** Report ***/
+.report {
+	position: fixed;
+	display: none;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:rgba(0,0,0,.5);
+	z-index: 3;
+}
+
+.report-box {
+	margin:32px auto;
+	max-width: 768px;
+	background-color: #f0f0f0;
+	overflow: hidden;
+	border-radius: 2px;
+	box-shadow: 0 2px 3px rgba(0,0,0,.2);
+}
+.report__hdr{
+	position: relative;
+	padding:6px;
+	background-color: #3498db;
+}
+.report__hdr-title {
+	text-align: center;
+	color:#fff;
+	font-size: 18px;
+	line-height: 1.34em;
+}
+.report-cls-btn {
+	position: absolute;
+	top:4px;
+	right:6px;
+	height:24px;
+	width:24px;
+	border:1px solid #f0f0f0;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.report-cls-btn:hover {
+	background-color: rgba(255,255,255,.3);
+}
+
+.report-cls-btn span {
+	position: absolute;
+	width: 16px;
+	height: 2px;
+	background-color: #fff;
+	top: 10px;
+	left: 3px;
+}
+.report-cls__x1 {
+	transform: rotateZ(45deg)
+}
+.report-cls__x2 {
+	transform: rotateZ(-45deg)
+}
+
+.report-body__hdr,
+.report-body__ftr {
+	text-align: center;
+	font-family: times, georgia, serif;
+	font-style: italic;
+	color:#333;
+	margin:6px 0;
+}
+
+.rep-body__canvas {
+	margin:0 4px;
+	padding:12px 6px;
+	min-height: 300px;
+	display: flex;
+	background-color: #fafafa;
+	border:1px solid #cdcdcd;
+}
+.rep-value-box {
+	position: relative;
+	background-color:#3498db;
+	color:#fff;
+	text-align: center;
+	width: 100%;
+	margin:0 2px;
+	margin-top: auto;
+	text-shadow:0 1px 2px rgba(0,0,0,.3);
+}
+.rep-value-box span {
+	color:#f0f0f0;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.rep-value-box.above span {
+	position: absolute;
+	top:-20px;
+	width: 100%;
+	color: #333;
+	text-shadow:none;
+}
+
+.page-footer {
+	background-color: #f0f0f0;
+	padding:12px 6px;
+}
+.page-footer__copy {
+	text-align: center;
+	color:#555;
+}
