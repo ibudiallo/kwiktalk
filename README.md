@@ -1,14 +1,16 @@
 # Kwik Talk
 
-Kwik Talk is a simple conversation simulator in a party setting. It was made to show that the more people you add people to a conversation, the harder it is to keep focus.
+Kwik Talk is a simple conversation simulator in a party setting. It was made to show that the more people you add to a conversation, the harder it is to keep them as a group.
 
 ## How it works. 
 
 [DEMO](https://idiallo.com/projects/kwiktalk/index.html)
 
+[Blog Post](https://idiallo.com/blog/kwiktalk)
+
 Open it on the browser, select the number of people you want in a group, (optionally add more groups) then click start. A conversation simulation starts. You can increase the speed by dragging the speed slider. Each step is represented as a second, you can jump 30 minutes ahead to see where it goes.
 
-Click on the **Show Report** button to get see the how each conversation group scores.
+Click on the **Show Report** button to see the how each conversation group scores over time.
 
 You can add people into random groups by clicking on the **New Person** button. 
 
@@ -21,9 +23,9 @@ Double click on index.html and it will open on your favorite browser.
 
 ## Author's comment
 
-I built it after reading comments on [hacker news](https://news.ycombinator.com/item?id=17964657). The article said **Why are conversations limited to about four people?**
+I built it after reading comments on [hacker news](https://news.ycombinator.com/item?id=17964657) about an article that asked: **Why are conversations limited to about four people?**
 
-The main goal of the simulator was to see how long it takes for a conversation with a large group breaks up into smaller pieces. There are some values that I have chosen arbitrarily, like `Person.talkLife` which determines how long a person will talk for, or `People.leaveAfter` that determines how long before a person stay in a group without participating before they leave. These values can be changed.
+The main goal of the simulator was to see how long it takes for a conversation with a large group breaks up into smaller pieces. There are some values that I have chosen arbitrarily, like `Person.talkLife` which determines how long a person will talk for, or `People.leaveAfter` that determines how long before a person stays in a group without participating before they leave. These values can be changed.
 
 ## To Do
 
