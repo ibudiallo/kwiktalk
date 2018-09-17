@@ -4,6 +4,8 @@ Kwik Talk is a simple conversation simulator in a party setting. It was made to 
 
 ## How it works. 
 
+[DEMO](https://idiallo.com/projects/kwiktalk/index.html)
+
 Open it on the browser, select the number of people you want in a group, (optionally add more groups) then click start. A conversation simulation starts. You can increase the speed by dragging the speed slider. Each step is represented as a second, you can jump 30 minutes ahead to see where it goes.
 
 Click on the **Show Report** button to get see the how each conversation group scores.
