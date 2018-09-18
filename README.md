@@ -1,5 +1,7 @@
 # Kwik Talk
 
+![Kwik Talk](https://raw.githubusercontent.com/ibudiallo/kwiktalk/img/logo-1.png)
+
 Kwik Talk is a simple conversation simulator in a party setting. It was made to show that the more people you add to a conversation, the harder it is to keep them as a group.
 
 ## How it works. 
@@ -12,7 +14,7 @@ Open it on the browser, select the number of people you want in a group, (option
 
 Click on the **Show Report** button to see the how each conversation group scores over time.
 
-You can add people into random groups by clicking on the **New Person** button. 
+You can add people into random groups by clicking on the **Add Person** button. 
 
 Click on a person to gain insight about his time in the group.
 
