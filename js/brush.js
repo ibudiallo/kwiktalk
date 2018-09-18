@@ -4,10 +4,16 @@ var Brush = {
 	analytic:{},
 	abox:null,
 	iterationFld:null,
+	peopleCountFld:null,
 	timeFormat:"{hour}:{min}:{sec}",
 	init:function(){
 		this.iterationFld = document.getElementById("time-fld");
 		this.abox = document.getElementById("analytic-box");
+		this.peopleCountFld = document.getElementById("people-count");
+	},
+
+	showPeopleCount:function(count){
+		this.peopleCountFld.innerText = count;
 	},
 
 	renderGroup:function(group){
@@ -61,7 +67,7 @@ var Brush = {
 	},
 
 	createAnalytics:function(){
-		var box = sdom.byClass("analytic-content")[0];
+		var box = document.getElementById("analytic-content");;
 		var idStr = "person-analytics";
 		if (document.getElementById(idStr)){
 			return ;

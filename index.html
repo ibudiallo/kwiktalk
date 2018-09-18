@@ -11,16 +11,14 @@
 </head>
 <body>
 <section>
-	<header class="page-header">
+	<header class="page-header"> 
+		<span class="page-header__logo"><img src="img/logo-2.png" alt="Kwik Talk"></span>
 		<h1 class="page-header__title">Conversation Simulator</h1>
 	</header>
 
 	<div class="page-content">
 		<div class="box-control">
-			<h2 class="box-control__title">People Control</h2>
-			<div class="box-control__ctrl">
-				<button id="add-btn">New Person</button>
-			</div>
+			<h2 class="box-control__title">Controls:</h2>
 			
 			<div class="box-control__ctrl">
 				<label>Speed</label>
@@ -36,8 +34,15 @@
 				<button id="jump-btn">Jump 30 min</button>
 			</div>
 			<div class="box-control__ctrl">
+				<b>Time</b>
 				<span id="time-fld">0</span>
 			</div>
+			<div class="box-control__ctrl">
+				<button id="add-btn">Add Person</button>
+				<span id="people-count">0</span>
+			</div>
+
+
 		</div>
 		<div class="canvas-box" id="canvas-box">
 
@@ -49,7 +54,7 @@
 			</div>
 			<h2 class="analytic-box__title">Person</h2>
 
-			<div class="analytic-content"></div>
+			<div class="analytic-content" id="analytic-content"></div>
 		</div>
 
 	</div>
@@ -61,6 +66,7 @@
 			</header>
 			<div class="intro-over__content">
 				<div class="intro-over__ctrl">
+					<p class="intro-over__logo"><img src="img/kwiktalk.png" alt="Kwik Talk"/></p>
 					<p>A quick and simple conversation simulator. Add people to the conversation and watch them get bored and walk away to meet new groups.</p>
 				</div>
 

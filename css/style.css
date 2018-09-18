@@ -21,6 +21,7 @@
 
 .page-header {
 	background-color:#e74c3c;
+	position: relative;
 }
 .page-header__title {
 	padding:12px 6px;
@@ -28,6 +29,14 @@
 	line-height: 1.2em;
 	text-align: center;
 	color:#fff;
+}
+.page-header__logo {
+	position: absolute;
+	top:16px;
+	left:3px;
+}
+.page-header__logo img {
+	width: 100px;
 }
 .page-content {
 	margin:32px auto;
@@ -255,7 +264,12 @@
 .intro-groups {
 	margin-bottom: 12px;
 }
-
+.intro-over__logo {
+	text-align: center;
+}
+.intro-over__logo img {
+	width:100px;
+}
 
 .intro-over__ctrl {
 	margin-bottom: 12px;

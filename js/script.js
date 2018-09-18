@@ -21,6 +21,7 @@ var Converser = {
 	iteration:0,
 	timeID :null,
 	groupAddTrack:0,
+	peopleCount: 0,
 	init:function(){
 
 		this.addBtn = document.getElementById("add-btn");
@@ -162,7 +163,8 @@ var Converser = {
 
 	update: function(){
 		this.iteration++;
-		var remove = [];
+		var remove = [],
+		peopleCount = 0;
 
 		for (var j = 0,k = this.groups.length;j<k;j++) {
 			var group = this.groups[j];
@@ -186,6 +188,7 @@ var Converser = {
 		for (var j = 0,k = this.groups.length;j<k;j++) {
 			var group = this.groups[j];
 			var talker = this.isAnyoneTalking(group);
+			peopleCount+= group.list.length;
 			if (!talker){
 				this.startConversation(group);
 			}else {
@@ -200,6 +203,8 @@ var Converser = {
 			group.updatePosition();
 			Report.process(group);
 		}
+		this.peopleCount = peopleCount;
+		Brush.showPeopleCount(peopleCount);
 	},
 	draw:function(){
 		// update ui
