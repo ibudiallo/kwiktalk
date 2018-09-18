@@ -126,21 +126,26 @@ Person.prototype.reset = function() {
 
 
 
-function People(id,position){
+function Group(dom,id,position){
 	this.id = "group-"+id;
 	this.list = [];
 	this.count = 0;
 	this.position = position;
 	this.leaveAfter = getRandIntInclusive(30,60);
+	this.elem = document.createElement("div");
+	this.elem.className = "group-elem";
+	this.elem.id = "group-"+id+"-floater";
+	this.elem.setAttribute("data-name",this.id);
+	dom.appendChild(this.elem);
 }
 
-People.prototype.addPerson = function(person){
+Group.prototype.addPerson = function(person){
 	this.list.push(person);
 	person.group = this.id;
 	this.count = this.list.length;
 };
 
-People.prototype.removePerson = function(person){
+Group.prototype.removePerson = function(person){
 	var index;
 	for(var i = 0,l = this.list.length;i<l;i++){
 		if (person === this.list[i]){
@@ -153,12 +158,12 @@ People.prototype.removePerson = function(person){
 	return obj;
 };
 
-People.prototype.setPosition = function(x,y){
+Group.prototype.setPosition = function(x,y){
 	this.position.x = x;
 	this.position.y = y;
 };
 
-People.prototype.updatePosition = function(){
+Group.prototype.updatePosition = function(){
 	var id = parseInt(this.id.replace("group-",""),10),
 		col = Math.floor(window.innerWidth / 288),
 		x = Math.floor(id%col) * 288,
@@ -167,7 +172,7 @@ People.prototype.updatePosition = function(){
 	this.position.y = y+96;
 };
 
-People.prototype.update = function(){
+Group.prototype.update = function(){
 	var i = 0, l = this.list.length,p;
 	for(;i<l;i++){
 		p = this.list[i];

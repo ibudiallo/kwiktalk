@@ -95,7 +95,6 @@ var Converser = {
 			this.initPeople(parseInt(input.value,10));
 		}
 		this.running = true;
-		this.initPeople();
 		this.updatePositions();
 		this.startConversation(this.groups[0]);
 		this.tick();
@@ -233,9 +232,10 @@ var Converser = {
 	},
 
 	createGroup:function(position){
-		var people = new People(this.groupIdTrack,position);
+		var people = new Group(this.box,this.groupIdTrack,position);
 		this.groupIdTrack++;
 		this.groups.push(people);
+
 		return people;
 	},
 

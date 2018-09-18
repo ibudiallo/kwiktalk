@@ -11,6 +11,8 @@ var Brush = {
 	},
 
 	renderGroup:function(group){
+		group.elem.style.left = (group.position.x - 96) +"px";
+		group.elem.style.top = (group.position.y - 96) +"px";
 		for(var i =0,l = group.list.length;i<l;i++){
 			var p = group.list[i];
 			this.renderPerson(p);

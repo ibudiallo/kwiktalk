@@ -14,6 +14,8 @@ Click on the **Show Report** button to see the how each conversation group score
 
 You can add people into random groups by clicking on the **New Person** button. 
 
+Click on a person to gain insight about his time in the group.
+
 
 ## Installation. 
 
@@ -25,7 +27,7 @@ Double click on index.html and it will open on your favorite browser.
 
 I built it after reading comments on [hacker news](https://news.ycombinator.com/item?id=17964657) about an article that asked: **Why are conversations limited to about four people?**
 
-The main goal of the simulator was to see how long it takes for a conversation with a large group breaks up into smaller pieces. There are some values that I have chosen arbitrarily, like `Person.talkLife` which determines how long a person will talk for, or `People.leaveAfter` that determines how long before a person stays in a group without participating before they leave. These values can be changed.
+The main goal of the simulator was to see how long it takes for a conversation with a large group breaks up into smaller pieces. There are some values that I have chosen arbitrarily, like `Person.talkLife` which determines how long a person will talk for, or `Group.leaveAfter` that determines how long before a person stays in a group without participating before they leave. These values can be changed.
 
 ## To Do
 
