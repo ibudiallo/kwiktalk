@@ -1,6 +1,6 @@
 # Kwik Talk
 
-![Kwik Talk](https://raw.githubusercontent.com/ibudiallo/kwiktalk/img/logo-1.png)
+![Kwik Talk](https://raw.githubusercontent.com/ibudiallo/kwiktalk/master/img/logo-1.png)
 
 Kwik Talk is a simple conversation simulator in a party setting. It was made to show that the more people you add to a conversation, the harder it is to keep them as a group.
 
