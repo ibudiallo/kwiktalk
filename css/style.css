@@ -96,7 +96,32 @@
 }
 
 
-
+@media (min-width: 481px) and (max-width: 767px){
+	.page-header__logo {
+	    position: relative;
+	    text-align: center;
+	    display: block;
+	}
+	.page-content {
+		margin:32px 12px;
+	}
+	.canvas-box {
+		top:42px;
+	}
+}
+@media (max-width: 480px){
+	.page-header__logo {
+	    position: relative;
+	    text-align: center;
+	    display: block;
+	}
+	.page-content {
+		margin:32px 12px;
+	}
+	.canvas-box {
+		top:76px;
+	}
+}
 
 .canvas-box {
 	min-height:580px;
